@@ -13,9 +13,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python3 scripts/refresh.py && cp data/events.json site/events.json
+      - run: python3 scripts/refresh.py && cp data/events.json site/events.json && python3 scripts/seo.py
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git add data site/events.json
+          git add data site
           git diff --cached --quiet || (git commit -m "Weekly data refresh" && git push)
+      - run: |
+          KEY=$(cat .indexnow_key)
+          curl -s -o /dev/null -w "IndexNow %{http_code}\n" -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json' -d "{\"host\":\"cperadar.com\",\"key\":\"$KEY\",\"keyLocation\":\"https://cperadar.com/$KEY.txt\",\"urlList\":[\"https://cperadar.com/\",\"https://cperadar.com/sitemap.xml\"]}" || true
