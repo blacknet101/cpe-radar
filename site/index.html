@@ -2,7 +2,8 @@
 <title>CPE Radar: free CPE webinars, summits &amp; labs for CISSP, Security+, CISM</title><link rel="stylesheet" href="style.css"></head><body>
 <header><a class="logo" href="index.html">◎ CPE Radar</a><nav><a href="index.html">Calendar</a><a href="submit.html">Submit an event</a><a href="sponsor.html">Sponsor</a></nav></header>
 <section class="hero"><h1>Every free CPE, in one place.</h1><p>Free webinars, virtual summits and workshops that count toward CISSP, Security+, CISM and more. Updated weekly.</p>
-<form class="nl" onsubmit="event.preventDefault();this.innerHTML='<b>Thanks! (newsletter not live yet)</b>'"><input type="email" placeholder="you@example.com" required><button>Get "Free CPEs this week"</button></form></section>
+<form class="nl" onsubmit="event.preventDefault();const e=this.querySelector('input[type=email]').value;window.open('https://cpe-radar.beehiiv.com/subscribe?email='+encodeURIComponent(e),'_blank')"><input type="email" name="email" placeholder="you@example.com" required><button type="submit">Get "Free CPEs this week"</button></form>
+<p class="nl-sub"><a href="https://cpe-radar.beehiiv.com/subscribe" target="_blank" rel="noopener">Subscribe</a></p></section>
 <section class="featured"><span>FEATURED</span> Your webinar here. <a href="sponsor.html">Sponsor a spot →</a></section>
 <section class="filters"><input id="q" placeholder="Search titles, hosts…"><select id="cert"><option value="">All certs</option></select><select id="fmt"><option value="">All formats</option></select>
 <select id="when"><option value="">Any date</option><option value="7">Next 7 days</option><option value="30">Next 30 days</option><option value="90">Next 90 days</option></select>

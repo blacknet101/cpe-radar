@@ -27,3 +27,5 @@ Hi there! This week we found **10 free events** worth about **15.5 CPEs**. ISC2 
 *Sponsor this slot:* reach security pros who are actively earning CPEs. [Details](https://cpe.blcknet.com/sponsor.html)
 
 *CPE values marked est. are our estimates (≈1 per hour). Check with your certifying body. Know a free event? [Submit it](https://cpe.blcknet.com/submit.html).*
+
+*[Subscribe for weekly free CPEs](https://cpe-radar.beehiiv.com/subscribe)*
