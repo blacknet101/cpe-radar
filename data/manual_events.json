@@ -1,0 +1,112 @@
+[
+ {
+  "title": "How Predictive AI Is Rewriting the Attacker Timeline",
+  "host": "SANS Institute",
+  "start": "2026-11-09T10:30:00-05:00",
+  "timezone": "America/New_York",
+  "duration_min": 60,
+  "format": "Webinar",
+  "cpe": 1,
+  "cpe_estimate": false,
+  "certs": [
+   "CISSP",
+   "CISM",
+   "Security+",
+   "CySA+",
+   "GIAC"
+  ],
+  "auto_submit": false,
+  "cpe_note": "SANS webcasts list CPEs; GIAC accepts, others self-report",
+  "url": "https://www.sans.org/webcasts/how-predictive-ai-rewriting-attacker-timeline",
+  "source": "sans.org/webcasts (manual, page verified 2026-10-16)",
+  "free": true
+ },
+ {
+  "title": "SANS 2026 State of ICS/OT Security Survey Insights: Industrial Cybersecurity at a Crossroads",
+  "host": "SANS Institute",
+  "start": "2026-11-10T10:30:00-05:00",
+  "timezone": "America/New_York",
+  "duration_min": 180,
+  "format": "Virtual Summit",
+  "cpe": 3,
+  "cpe_estimate": false,
+  "certs": [
+   "CISSP",
+   "CISM",
+   "Security+",
+   "CySA+",
+   "GIAC"
+  ],
+  "auto_submit": false,
+  "cpe_note": "SANS webcasts list CPEs; GIAC accepts, others self-report",
+  "url": "https://www.sans.org/webcasts/2026-ics-ot-security-survey-insights-industrial-cybersecurity-crossroads",
+  "source": "sans.org/webcasts (manual, page verified 2026-10-16)",
+  "free": true
+ },
+ {
+  "title": "Fall Cyber Solutions Fest 2026: Emerging Technologies Track",
+  "host": "SANS Institute",
+  "start": "2026-11-17T10:00:00-05:00",
+  "timezone": "America/New_York",
+  "duration_min": 360,
+  "format": "Virtual Summit",
+  "cpe": 6,
+  "cpe_estimate": true,
+  "certs": [
+   "CISSP",
+   "CISM",
+   "Security+",
+   "CySA+",
+   "GIAC"
+  ],
+  "auto_submit": false,
+  "cpe_note": "SANS webcasts list CPEs; GIAC accepts, others self-report",
+  "url": "https://www.sans.org/webcasts/fall-cyber-solutions-fest-2026-emerging-technologies-track",
+  "source": "sans.org/webcasts (manual, page verified 2026-10-16)",
+  "free": true
+ },
+ {
+  "title": "AI + Network Control: Visibility, Risk Prioritization, and Automation in the Age of Agentic NetOps",
+  "host": "SANS Institute",
+  "start": "2026-11-18T13:00:00-05:00",
+  "timezone": "America/New_York",
+  "duration_min": 60,
+  "format": "Webinar",
+  "cpe": 1,
+  "cpe_estimate": false,
+  "certs": [
+   "CISSP",
+   "CISM",
+   "Security+",
+   "CySA+",
+   "GIAC"
+  ],
+  "auto_submit": false,
+  "cpe_note": "SANS webcasts list CPEs; GIAC accepts, others self-report",
+  "url": "https://www.sans.org/webcasts/ai-plus-network-control-visibility-risk-prioritization-automation-age-agentic-netops",
+  "source": "sans.org/webcasts (manual, page verified 2026-10-16)",
+  "free": true
+ },
+ {
+  "title": "Threat Hunting in the Age of AI: What Still Needs You",
+  "host": "SANS Institute",
+  "start": "2026-11-23T17:30:00+03:00",
+  "timezone": "Asia/Riyadh (AST)",
+  "duration_min": 60,
+  "format": "Webinar",
+  "cpe": 1,
+  "cpe_estimate": false,
+  "certs": [
+   "CISSP",
+   "CISM",
+   "Security+",
+   "CySA+",
+   "GIAC"
+  ],
+  "auto_submit": false,
+  "cpe_note": "SANS webcasts list CPEs; GIAC accepts, others self-report",
+  "url": "https://www.sans.org/webcasts/threat-hunting-age-ai-what-still-needs-you",
+  "source": "sans.org/webcasts (manual, page verified 2026-10-16)",
+  "free": true
+ }
+]

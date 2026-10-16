@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:brighttalk="http://brighttalk.com/2009/rss_extensions" version="2.0">
+    <channel>
+        <title>Dell - Converged Infrastructure</title>
+        <description>Dell - Converged Infrastructure</description>
+        <brighttalk:strapline>Dell - Converged Infrastructure</brighttalk:strapline>
+        <link>https://www.brighttalk.com/channel/14979</link>
+        <atom:link href="https://www.brighttalk.com/service/channel/v2/channel/14979/feed" rel="self" type="application/atom+xml"/>
+    </channel>
+</rss>
