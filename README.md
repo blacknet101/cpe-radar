@@ -3,7 +3,7 @@
 A free, neutral calendar of free CPE webinars, summits, and labs for CISSP, Security+, CISM and more.
 
 - **Docs / plan:** [Notion – CPE Radar](https://www.notion.so/3fb09ccbb4e38183a5dcf93e1a8a6609)
-- **Live:** https://cpe.blcknet.com
+- **Live:** https://cperadar.com (also https://cpe.blcknet.com)
 - **Newsletter:** https://cpe-radar.beehiiv.com/subscribe
 
 ## Usage

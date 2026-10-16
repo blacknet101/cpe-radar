@@ -24,8 +24,8 @@ Hi there! This week we found **10 free events** worth about **15.5 CPEs**. ISC2 
 - Antisyphon “What in the Actual Cyber?! 2026 in Review”, Dec 9 (free summit)
 
 ---
-*Sponsor this slot:* reach security pros who are actively earning CPEs. [Details](https://cpe.blcknet.com/sponsor.html)
+*Sponsor this slot:* reach security pros who are actively earning CPEs. [Details](https://cperadar.com/sponsor.html)
 
-*CPE values marked est. are our estimates (≈1 per hour). Check with your certifying body. Know a free event? [Submit it](https://cpe.blcknet.com/submit.html).*
+*CPE values marked est. are our estimates (≈1 per hour). Check with your certifying body. Know a free event? [Submit it](https://cperadar.com/submit.html).*
 
 *[Subscribe for weekly free CPEs](https://cpe-radar.beehiiv.com/subscribe)*
