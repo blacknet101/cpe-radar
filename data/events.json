@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-16T14:51:50.072159+00:00",
- "count": 65,
+ "generated": "2026-10-19T15:15:54.001426+00:00",
+ "count": 73,
  "events": [
   {
    "title": "Workshop: Job Hunt Like a Hacker \u2013 2026 Edition",
@@ -231,6 +231,29 @@
    "url_ok": true
   },
   {
+   "title": "2026 Retail & Ecommerce Data Threat Report \u2013 with Google, S&P Global and Thales",
+   "host": "Thales - Cybersecurity Solutions",
+   "start": "2026-10-23T15:00:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 56,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CISM",
+    "Security+",
+    "CySA+",
+    "CASP+"
+   ],
+   "auto_submit": false,
+   "cpe_note": "Self-report; keep attendance certificate",
+   "url": "https://cpl.thalesgroup.com/resources/webinars?commid=677750",
+   "source": "BrightTALK channel 2037 RSS (Thales - Cybersecurity Solutions)",
+   "free": true,
+   "url_ok": true
+  },
+  {
    "title": "Beyond Users and Workloads: The Agentic Shift in Cloud-Native Zero Trust",
    "host": "ISC2",
    "start": "2026-10-27T15:00:00+00:00",
@@ -452,6 +475,27 @@
    "cpe_note": "Self-report; keep attendance certificate",
    "url": "https://www.webroot.com/us/en/business/resources/webinars?commid=676567",
    "source": "BrightTALK channel 8241 RSS (OpenText - Cybersecurity)",
+   "free": true,
+   "url_ok": true
+  },
+  {
+   "title": "Beyond the CPU: Exposing AI Attacks in the GPU Stack",
+   "host": "ISC2",
+   "start": "2026-11-03T11:00:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 45,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CCSP",
+    "SSCP"
+   ],
+   "auto_submit": true,
+   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "url": "https://www.brighttalk.com/webcast/288/677957",
+   "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
    "url_ok": true
   },
@@ -721,6 +765,27 @@
    "url_ok": true
   },
   {
+   "title": "Weakest Link: How Security Gaps and Bad AI Hygiene Can Kill a Business",
+   "host": "ISC2",
+   "start": "2026-11-04T22:00:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 60,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CCSP",
+    "SSCP"
+   ],
+   "auto_submit": true,
+   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "url": "https://www.brighttalk.com/webcast/288/678028",
+   "source": "BrightTALK channel 288 RSS (Information Security)",
+   "free": true,
+   "url_ok": true
+  },
+  {
    "title": "Awareness Alone Fails: Transform Security Habits Across SaaS Environments",
    "host": "ISC2",
    "start": "2026-11-05T16:00:00+00:00",
@@ -922,6 +987,52 @@
    "url_ok": true
   },
   {
+   "title": "Securing the Autonomous Frontier: Preventing Data Leakage and Unintended Actions in Agentic AI",
+   "host": "Thales - Cybersecurity Solutions",
+   "start": "2026-11-10T16:30:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 60,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CISM",
+    "Security+",
+    "CySA+",
+    "CASP+"
+   ],
+   "auto_submit": false,
+   "cpe_note": "Self-report; keep attendance certificate",
+   "url": "https://cpl.thalesgroup.com/resources/webinars?commid=675708",
+   "source": "BrightTALK channel 2037 RSS (Thales - Cybersecurity Solutions)",
+   "free": true,
+   "url_ok": true
+  },
+  {
+   "title": "Quantum Threats and Where to Beat Them",
+   "host": "WiCyS - Women in CyberSecurity",
+   "start": "2026-11-10T19:00:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 60,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CISM",
+    "Security+",
+    "CySA+",
+    "CASP+"
+   ],
+   "auto_submit": false,
+   "cpe_note": "Self-report; keep attendance certificate",
+   "url": "https://www.brighttalk.com/webcast/17216/677880",
+   "source": "BrightTALK channel 17216 RSS (WiCyS - Women in CyberSecurity)",
+   "free": true,
+   "url_ok": true
+  },
+  {
    "title": "Bundle without the shackles: More choice, more flexibility, more growth",
    "host": "OpenText - Cybersecurity",
    "start": "2026-11-11T15:00:00+00:00",
@@ -1032,6 +1143,27 @@
    "cpe_note": "Self-report; keep attendance certificate",
    "url": "https://www.brighttalk.com/webcast/11673/668919",
    "source": "BrightTALK channel 11673 RSS (Qualys)",
+   "free": true,
+   "url_ok": true
+  },
+  {
+   "title": "Leading Through Critical Incidents: Communication, Trust and Recovery",
+   "host": "ISC2",
+   "start": "2026-11-13T08:00:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 45,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CCSP",
+    "SSCP"
+   ],
+   "auto_submit": true,
+   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "url": "https://www.brighttalk.com/webcast/288/677950",
+   "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
    "url_ok": true
   },
@@ -1260,6 +1392,29 @@
    "url_ok": true
   },
   {
+   "title": "CyberPhysical CyberSecurity",
+   "host": "WiCyS - Women in CyberSecurity",
+   "start": "2026-11-19T19:00:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 60,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CISM",
+    "Security+",
+    "CySA+",
+    "CASP+"
+   ],
+   "auto_submit": false,
+   "cpe_note": "Self-report; keep attendance certificate",
+   "url": "https://www.brighttalk.com/webcast/17216/677764",
+   "source": "BrightTALK channel 17216 RSS (WiCyS - Women in CyberSecurity)",
+   "free": true,
+   "url_ok": true
+  },
+  {
    "title": "Threat Hunting in the Age of AI: What Still Needs You",
    "host": "SANS Institute",
    "start": "2026-11-23T17:30:00+03:00",
@@ -1279,6 +1434,29 @@
    "cpe_note": "SANS webcasts list CPEs; GIAC accepts, others self-report",
    "url": "https://www.sans.org/webcasts/threat-hunting-age-ai-what-still-needs-you",
    "source": "sans.org/webcasts (manual, page verified 2026-10-16)",
+   "free": true,
+   "url_ok": true
+  },
+  {
+   "title": "From Design to Deploy \u2014 Continuous Security with AWS Security Agent",
+   "host": "WiCyS - Women in CyberSecurity",
+   "start": "2026-11-24T19:00:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 60,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CISM",
+    "Security+",
+    "CySA+",
+    "CASP+"
+   ],
+   "auto_submit": false,
+   "cpe_note": "Self-report; keep attendance certificate",
+   "url": "https://www.brighttalk.com/webcast/17216/677983",
+   "source": "BrightTALK channel 17216 RSS (WiCyS - Women in CyberSecurity)",
    "free": true,
    "url_ok": true
   },
