@@ -4,7 +4,7 @@
 Hi there! This week we found **11 free events** worth about **16.5 CPEs**. ISC2 members: sessions tagged auto-submit get credited automatically. Everyone else, save your attendance certificate.
 
 ## ⭐ Pick of the week
-**[Workshop: Job Hunt Like a Hacker – 2026 Edition](https://www.antisyphontraining.com/event/workshop-job-hunt-like-a-hacker-2026-edition-5/)**, Antisyphon Training / Black Hills InfoSec. About 6.5 CPEs (est.) in one sitting — tomorrow morning.
+**[Workshop: Job Hunt Like a Hacker – 2026 Edition](https://www.antisyphontraining.com/event/workshop-job-hunt-like-a-hacker-2026-edition-5/)**, Antisyphon Training / Black Hills InfoSec. About 6.5 CPEs (est.) in one sitting — today at 10 AM ET / 7 AM PT.
 
 ## 📅 This week
 - **Tue Oct 20, 10:00 AM ET**: [Workshop: Job Hunt Like a Hacker – 2026 Edition](https://www.antisyphontraining.com/event/workshop-job-hunt-like-a-hacker-2026-edition-5/) · Antisyphon Training / Black Hills InfoSec · 6.5 CPE est.
