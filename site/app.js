@@ -1,12 +1,85 @@
-let EV=[];const $=i=>document.getElementById(i);
-fetch('events.json').then(r=>r.json()).then(d=>{EV=d.events;$('gen').textContent=new Date(d.generated).toLocaleDateString();
-const certs=[...new Set(EV.flatMap(e=>e.certs))].sort(),fm=[...new Set(EV.map(e=>e.format))].sort();
-certs.forEach(c=>$('cert').add(new Option(c,c)));fm.forEach(c=>$('fmt').add(new Option(c,c)));
-['q','cert','fmt','when','auto'].forEach(i=>$(i).addEventListener('input',draw));draw();});
-function draw(){const q=$('q').value.toLowerCase(),c=$('cert').value,f=$('fmt').value,w=+$('when').value,a=$('auto').checked,now=Date.now();
-const r=EV.filter(e=>(!q||(e.title+e.host).toLowerCase().includes(q))&&(!c||e.certs.includes(c))&&(!f||e.format==f)&&(!a||e.auto_submit)&&(!w||new Date(e.start)-now<w*864e5));
-$('count').textContent=r.length+' free events';
-$('list').innerHTML=r.map(e=>{const d=new Date(e.start);return `<article><div class="date"><b>${d.toLocaleDateString(undefined,{month:'short',day:'numeric'})}</b><small>${d.toLocaleTimeString([], {hour:'numeric',minute:'2-digit',timeZoneName:'short'})}</small></div>
-<div class="body"><a href="${e.url}" target="_blank" rel="noopener">${e.title}</a><div class="meta">${e.host} · ${e.format} · ${e.duration_min} min</div>
-<div class="tags">${e.certs.map(x=>`<i>${x}</i>`).join('')}${e.auto_submit?'<i class="auto">auto-submit</i>':''}</div></div>
-<div class="cpe">${e.cpe}<small>CPE${e.cpe_estimate?' est.':''}</small></div></article>`}).join('');}
+// Hide an event once its start instant has passed. Compare instants, not UTC
+// calendar dates: a session later this US evening stays listed until it
+// begins, even when that timestamp already falls on the next UTC date.
+// The same rule is what scripts/refresh.py and scripts/seo.py apply at
+// generation time; this keeps the list current between Monday refreshes.
+function isUpcoming(event, now) {
+  const start = Date.parse(event.start);
+  return Number.isFinite(start) && start >= now;
+}
+
+function visibleEvents(events, options = {}) {
+  const now = options.now ?? Date.now();
+  const query = (options.q || "").toLowerCase();
+  const cert = options.cert || "";
+  const format = options.format || "";
+  const autoOnly = !!options.autoOnly;
+  const windowMs = (+options.withinDays || 0) * 86_400_000;
+  return events.filter((event) => {
+    const start = Date.parse(event.start);
+    if (!isUpcoming(event, now)) return false;
+    if (query && !(event.title + event.host).toLowerCase().includes(query)) return false;
+    if (cert && !event.certs.includes(cert)) return false;
+    if (format && event.format !== format) return false;
+    if (autoOnly && !event.auto_submit) return false;
+    // Upper bound only. Past events are already removed above; a negative
+    // start-now delta must not satisfy "Next N days".
+    if (windowMs && start - now >= windowMs) return false;
+    return true;
+  });
+}
+
+function renderEvent(event) {
+  const d = new Date(event.start);
+  const when = d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  const time = d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+  const tags = event.certs.map((cert) => `<i>${cert}</i>`).join("") + (event.auto_submit ? '<i class="auto">auto-submit</i>' : "");
+  return `<article><div class="date"><b>${when}</b><small>${time}</small></div>
+<div class="body"><a href="${event.url}" target="_blank" rel="noopener">${event.title}</a><div class="meta">${event.host} · ${event.format} · ${event.duration_min} min</div>
+<div class="tags">${tags}</div></div>
+<div class="cpe">${event.cpe}<small>CPE${event.cpe_estimate ? " est." : ""}</small></div></article>`;
+}
+
+function bootCalendar() {
+  const $ = (id) => document.getElementById(id);
+  let events = [];
+  let drawn = "";
+
+  fetch("events.json")
+    .then((res) => res.json())
+    .then((data) => {
+      events = data.events;
+      $("gen").textContent = new Date(data.generated).toLocaleDateString();
+      const certs = [...new Set(events.flatMap((event) => event.certs))].sort();
+      const formats = [...new Set(events.map((event) => event.format))].sort();
+      certs.forEach((cert) => $("cert").add(new Option(cert, cert)));
+      formats.forEach((format) => $("fmt").add(new Option(format, format)));
+      ["q", "cert", "fmt", "when", "auto"].forEach((id) => $(id).addEventListener("input", draw));
+      draw();
+      // An open tab drops an event within a minute of its start, and again
+      // when the visitor comes back the next morning.
+      setInterval(draw, 60_000);
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") draw();
+      });
+    });
+
+  function draw() {
+    const shown = visibleEvents(events, {
+      q: $("q").value,
+      cert: $("cert").value,
+      format: $("fmt").value,
+      withinDays: +$("when").value,
+      autoOnly: $("auto").checked,
+    });
+    const count = shown.length + " free events";
+    const html = shown.map(renderEvent).join("");
+    const key = count + "\n" + html;
+    if (key === drawn) return;
+    drawn = key;
+    $("count").textContent = count;
+    $("list").innerHTML = html;
+  }
+}
+
+if (typeof document !== "undefined") bootCalendar();
