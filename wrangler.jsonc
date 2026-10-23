@@ -12,5 +12,8 @@
     "enabled": true,
     "logs": { "enabled": true, "head_sampling_rate": 1 },
     "traces": { "enabled": true, "head_sampling_rate": 1 }
-  }
+  },
+  // Required by `npx wrangler preview` (Workers Builds branch previews).
+  // Empty: previews use the top-level settings. Assets and compatibility stay above.
+  "previews": {}
 }

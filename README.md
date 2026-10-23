@@ -11,7 +11,7 @@ A free, neutral calendar of free CPE webinars, summits, and labs for CISSP, Secu
 - Static preview: `cd site && python3 -m http.server 8765` (the forms need the Worker, below).
 - Forms and site together: copy `.dev.vars.example` to `.dev.vars`, set `GITHUB_TOKEN`, then `npx wrangler dev`.
 - Tests: `node --test`
-- Deploy: Cloudflare Worker `cpe-radar` (`wrangler.jsonc`). Static files live in `site/`. There is no build command. Pushes to `main` auto-deploy.
+- Deploy: Cloudflare Worker `cpe-radar` (`wrangler.jsonc`). Static files live in `site/`. There is no build command. Pushes to `main` auto-deploy. Branch preview builds run `npx wrangler preview`, which needs the empty `previews` block in that file.
 - A weekly GitHub Action (`.github/workflows/refresh.yml`) runs the refresh and commits updated data.
 
 ## Form submissions
