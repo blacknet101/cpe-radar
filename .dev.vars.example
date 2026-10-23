@@ -1,0 +1,4 @@
+# Fine-grained personal access token for blacknet101/cpe-radar.
+# Permission: Issues, Read and write. Used by `npx wrangler dev` only.
+# Production reads the GITHUB_TOKEN Worker secret, not this file.
+GITHUB_TOKEN=
