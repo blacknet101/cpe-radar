@@ -29,6 +29,25 @@ function visibleEvents(events, options = {}) {
   });
 }
 
+function pageSize() {
+  return 10;
+}
+
+// The catalog is one static array. Render a page at a time so the list has
+// an end instead of growing for as long as the visitor scrolls.
+function listWindow(events, limit) {
+  const total = events.length;
+  const size = Math.max(0, Math.floor(Number(limit)) || pageSize());
+  const shown = events.slice(0, size);
+  return { events: shown, total, shown: shown.length, remaining: total - shown.length };
+}
+
+function moreState(windowed) {
+  if (!windowed.total) return { status: "", button: false };
+  if (!windowed.remaining) return { status: "End of the list", button: false };
+  return { status: `Showing ${windowed.shown} of ${windowed.total}`, button: true };
+}
+
 function renderEvent(event) {
   const d = new Date(event.start);
   const when = d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
@@ -44,6 +63,13 @@ function bootCalendar() {
   const $ = (id) => document.getElementById(id);
   let events = [];
   let drawn = "";
+  let limit = pageSize();
+  let filterKey = "";
+
+  $("more").addEventListener("click", () => {
+    limit += pageSize();
+    draw();
+  });
 
   fetch("events.json")
     .then((res) => res.json())
@@ -64,21 +90,44 @@ function bootCalendar() {
       });
     });
 
-  function draw() {
-    const shown = visibleEvents(events, {
+  function filters() {
+    return {
       q: $("q").value,
       cert: $("cert").value,
       format: $("fmt").value,
       withinDays: +$("when").value,
       autoOnly: $("auto").checked,
-    });
-    const count = shown.length + " free events";
-    const html = shown.map(renderEvent).join("");
-    const key = count + "\n" + html;
-    if (key === drawn) return;
-    drawn = key;
+    };
+  }
+
+  function draw() {
+    const options = filters();
+    const key = JSON.stringify(options);
+    const filterChanged = key !== filterKey;
+    if (filterChanged) {
+      filterKey = key;
+      limit = pageSize();
+    }
+    const matched = visibleEvents(events, options);
+    const windowed = listWindow(matched, limit);
+    const state = moreState(windowed);
+    const count = matched.length + " free events";
+    const html = windowed.events.map(renderEvent).join("");
+    const signature = [count, html, state.status, state.button].join("\n");
+    if (signature === drawn) return;
+    drawn = signature;
     $("count").textContent = count;
-    $("list").innerHTML = html;
+    const list = $("list");
+    // Append on "Load more" so iOS keeps the scroll position. Replace when
+    // the filter set itself changed.
+    if (!filterChanged && list.children.length > 0 && list.children.length < windowed.events.length) {
+      list.insertAdjacentHTML("beforeend", windowed.events.slice(list.children.length).map(renderEvent).join(""));
+    } else {
+      list.innerHTML = html;
+    }
+    $("more-wrap").hidden = windowed.total === 0;
+    $("more-status").textContent = state.status;
+    $("more").hidden = !state.button;
   }
 }
 

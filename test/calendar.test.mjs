@@ -16,7 +16,7 @@ function loadApp() {
   return sandbox;
 }
 
-const { visibleEvents, renderEvent } = loadApp();
+const { visibleEvents, renderEvent, listWindow, moreState, pageSize } = loadApp();
 
 function ev(overrides) {
   return {
@@ -182,12 +182,58 @@ test("cards still render the start in the viewer's local zone", () => {
   assert.equal(result.status, 0, result.stderr || result.stdout);
 });
 
+test("the list renders one page at a time and stops until Load more", () => {
+  assert.equal(pageSize(), 10);
+  const now = Date.parse("2026-10-23T21:41:00Z");
+  const events = [
+    ev({ title: "Past workshop", start: "2026-10-20T14:00:00Z" }),
+    ...Array.from({ length: 25 }, (_, i) =>
+      ev({
+        title: `Upcoming ${i}`,
+        start: new Date(now + (i + 1) * 86_400_000).toISOString(),
+        url: `https://example.com/${i}`,
+      }),
+    ),
+  ];
+  const matched = visibleEvents(events, { now });
+  assert.equal(matched.length, 25);
+  assert.equal(`${matched.length} free events`, "25 free events");
+
+  const first = listWindow(matched, pageSize());
+  assert.equal(first.shown, 10);
+  assert.equal(first.remaining, 15);
+  assert.deepEqual(first.events.map((event) => event.title), matched.slice(0, 10).map((event) => event.title));
+  assert.equal(moreState(first).status, "Showing 10 of 25");
+  assert.equal(moreState(first).button, true);
+
+  const second = listWindow(matched, pageSize() * 2);
+  assert.equal(second.shown, 20);
+  assert.equal(second.remaining, 5);
+  assert.equal(moreState(second).status, "Showing 20 of 25");
+  assert.equal(moreState(second).button, true);
+
+  const all = listWindow(matched, pageSize() * 3);
+  assert.equal(all.shown, 25);
+  assert.equal(all.remaining, 0);
+  assert.equal(moreState(all).status, "End of the list");
+  assert.equal(moreState(all).button, false);
+  assert.ok(all.events.every((event) => Date.parse(event.start) >= now));
+
+  const short = listWindow(matched.slice(0, 4), pageSize());
+  assert.equal(short.shown, 4);
+  assert.equal(moreState(short).status, "End of the list");
+  assert.equal(moreState(short).button, false);
+  const empty = moreState(listWindow([], pageSize()));
+  assert.equal(empty.status, "");
+  assert.equal(empty.button, false);
+});
+
 test("renderEvent is available to the page and boot does not run without a document", () => {
   assert.match(renderEvent(ev({ title: "Keep <title>", cpe_estimate: false })), /CPE<\/small>/);
   assert.doesNotMatch(renderEvent(ev({ cpe_estimate: false })), /est\./);
   const html = readFileSync(new URL("../site/index.html", import.meta.url), "utf8");
   const app = readFileSync(new URL("../site/app.js", import.meta.url), "utf8");
-  for (const id of ["q", "cert", "fmt", "when", "auto", "count", "list", "gen"]) {
+  for (const id of ["q", "cert", "fmt", "when", "auto", "count", "list", "gen", "more", "more-status", "more-wrap"]) {
     assert.match(html, new RegExp(`id="${id}"`));
     assert.match(app, new RegExp(`["']${id}["']`));
   }
