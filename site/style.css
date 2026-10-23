@@ -8,4 +8,4 @@ main{max-width:900px;margin:0 auto 40px}article{display:flex;gap:16px;align-item
 .date{width:90px;text-align:center}.date b{display:block;font-size:18px}.date small,.meta{color:#9fb0c8;font-size:13px}.body{flex:1}.body a{font-weight:600;text-decoration:none;color:#fff}
 .tags i{font-style:normal;font-size:11px;background:#1b2a44;padding:2px 7px;border-radius:10px;margin:4px 4px 0 0;display:inline-block}.tags .auto{background:#0f5132;color:#7ef0b5}
 .cpe{text-align:center;font-size:22px;font-weight:800;color:#19c37d;width:70px}.cpe small{display:block;font-size:11px;color:#9fb0c8}
-footer{text-align:center;color:#6b7c96;font-size:12px;padding:24px}.page{max-width:640px;margin:40px auto;padding:0 20px}.page form{display:grid;gap:10px}
+footer{text-align:center;color:#6b7c96;font-size:12px;padding:24px}.page{max-width:640px;margin:40px auto;padding:0 20px}.page form{display:grid;gap:10px;position:relative}.hp{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}.status{margin:0}.status:empty{display:none}.status.ok{color:#7ef0b5}.status.err{color:#ff8b8b}button:disabled{opacity:.65}
