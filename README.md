@@ -16,9 +16,9 @@ A free, neutral calendar of free CPE webinars, summits, and labs for CISSP, Secu
 
 ## Form submissions
 
-Submit Event and Sponsor post to `POST /api/submissions`. The Worker opens a GitHub issue in `blacknet101/cpe-radar`. A hidden honeypot field drops bots, and each IP can send 5 submissions per hour.
+Submit Event and Sponsor post to `POST /api/submissions`. The Worker opens a GitHub issue in the private repo `blacknet101/cpe-radar-inbox` (`GITHUB_REPO` in `wrangler.jsonc`). The code fallback is that same private repo. It never falls back to the public `blacknet101/cpe-radar` repo. A hidden honeypot field drops bots, and each IP can send 5 submissions per hour.
 
-Josh reads them in the [Issues tab](https://github.com/blacknet101/cpe-radar/issues):
+Josh reads them in the [private inbox Issues tab](https://github.com/blacknet101/cpe-radar-inbox/issues):
 
 - Event submissions are titled `[event] …` and labeled `event-submission`.
 - Sponsor inquiries are titled `[sponsor] …` and labeled `sponsor-inquiry`.
@@ -29,9 +29,9 @@ The Worker creates those labels on the first submission when the token is allowe
 
 `GITHUB_TOKEN` is a Worker secret. Do not commit it. Build variables are not visible to the Worker at runtime.
 
-1. GitHub → Settings → Developer settings → Fine-grained tokens. Limit it to `blacknet101/cpe-radar` with **Issues: Read and write**.
+1. GitHub → Settings → Developer settings → Fine-grained tokens. Limit it to `blacknet101/cpe-radar-inbox` with **Issues: Read and write**.
 2. Cloudflare dashboard → Workers & Pages → **cpe-radar** → Settings → Variables and Secrets → add secret `GITHUB_TOKEN`.
    Or from a logged-in checkout: `npx wrangler secret put GITHUB_TOKEN`.
-3. Optional plain var `GITHUB_REPO` if the issues should land in a different `owner/name`. The default is `blacknet101/cpe-radar`.
+3. `GITHUB_REPO` is the plain var `blacknet101/cpe-radar-inbox`. Do not point it at the public site repo.
 
 Until that secret is set, the forms show “Submissions are temporarily unavailable.” and nothing is stored. After it is set, submit one event and one sponsor note and confirm both issues. No redeploy is required for the secret itself; the merged Worker change has to be deployed first.

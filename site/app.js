@@ -8,6 +8,16 @@ function isUpcoming(event, now) {
   return Number.isFinite(start) && start >= now;
 }
 
+// CompTIA renamed CASP+ to SecurityX. Accept either string so a filter
+// for the current name still matches events tagged with the old one.
+function certLabel(cert) {
+  return cert === "CASP+" ? "SecurityX" : cert;
+}
+
+function labeledCerts(event) {
+  return (event.certs || []).map(certLabel);
+}
+
 function visibleEvents(events, options = {}) {
   const now = options.now ?? Date.now();
   const query = (options.q || "").toLowerCase();
@@ -19,7 +29,7 @@ function visibleEvents(events, options = {}) {
     const start = Date.parse(event.start);
     if (!isUpcoming(event, now)) return false;
     if (query && !(event.title + event.host).toLowerCase().includes(query)) return false;
-    if (cert && !event.certs.includes(cert)) return false;
+    if (cert && !labeledCerts(event).includes(certLabel(cert))) return false;
     if (format && event.format !== format) return false;
     if (autoOnly && !event.auto_submit) return false;
     // Upper bound only. Past events are already removed above; a negative
@@ -52,7 +62,7 @@ function renderEvent(event) {
   const d = new Date(event.start);
   const when = d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
   const time = d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit", timeZoneName: "short" });
-  const tags = event.certs.map((cert) => `<i>${cert}</i>`).join("") + (event.auto_submit ? '<i class="auto">auto-submit</i>' : "");
+  const tags = labeledCerts(event).map((cert) => `<i>${cert}</i>`).join("") + (event.auto_submit ? '<i class="auto">ISC2 says it auto-credits members; check your ISC2 account.</i>' : "");
   return `<article><div class="date"><b>${when}</b><small>${time}</small></div>
 <div class="body"><a href="${event.url}" target="_blank" rel="noopener">${event.title}</a><div class="meta">${event.host} · ${event.format} · ${event.duration_min} min</div>
 <div class="tags">${tags}</div></div>
@@ -76,7 +86,7 @@ function bootCalendar() {
     .then((data) => {
       events = data.events;
       $("gen").textContent = new Date(data.generated).toLocaleDateString();
-      const certs = [...new Set(events.flatMap((event) => event.certs))].sort();
+      const certs = [...new Set(events.flatMap((event) => labeledCerts(event)))].sort();
       const formats = [...new Set(events.map((event) => event.format))].sort();
       certs.forEach((cert) => $("cert").add(new Option(cert, cert)));
       formats.forEach((format) => $("fmt").add(new Option(format, format)));

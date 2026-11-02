@@ -7,9 +7,28 @@ today = datetime.date.today().isoformat()
 pages = {"index.html": ("/", "CPE Radar: Free CPE Webinars & Events for CISSP, Security+, CISM",
           "CPE Radar is a free calendar of CPE webinars, virtual summits and workshops for CISSP, Security+, CISM and more, plus a weekly free-CPE newsletter. Updated weekly."),
          "submit.html": ("/submit.html", "Submit a Free CPE Event · CPE Radar", "Submit a free CPE webinar, summit or workshop to the CPE Radar calendar."),
-         "sponsor.html": ("/sponsor.html", "Sponsor CPE Radar · Reach CISSP, Security+ & CISM Holders", "Feature your webinar on CPE Radar and the weekly free-CPE newsletter for certified security professionals.")}
+         "sponsor.html": ("/sponsor.html", "Sponsor CPE Radar · Reach CISSP, Security+ & CISM Holders", "Feature your webinar on CPE Radar and the weekly free-CPE newsletter for certified security professionals."),
+         "privacy.html": ("/privacy.html", "Privacy Policy · CPE Radar", "Privacy policy for CPE Radar: what the site, forms, and newsletter collect, and who we share it with."),
+         "terms.html": ("/terms.html", "Terms of Use · CPE Radar", "Terms of use for CPE Radar, including the non-affiliation notice and CPE estimate disclaimer.")}
 now = datetime.datetime.now(datetime.timezone.utc).isoformat()
 up = [e for e in data["events"] if e["start"] >= now][:30]
+def cpe_amount(value):
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return str(value)
+    if number == int(number):
+        return str(int(number))
+    return f"{number:g}"
+
+def cert_label(cert):
+    return "SecurityX" if cert == "CASP+" else cert
+
+def event_description(e):
+    certs = ", ".join(cert_label(c) for c in e.get("certs", []))
+    toward = f" toward {certs}" if certs else ""
+    return f"Free {e.get('format','event')} may qualify for ~{cpe_amount(e.get('cpe'))} CPE (est.){toward}."
+
 def ev(e):
     s = datetime.datetime.fromisoformat(e["start"]); end = s + datetime.timedelta(minutes=e.get("duration_min") or 60)
     return {"@type": "Event", "name": e["title"], "startDate": e["start"], "endDate": end.isoformat(),
@@ -17,7 +36,7 @@ def ev(e):
             "location": {"@type": "VirtualLocation", "url": e["url"]}, "url": e["url"],
             "organizer": {"@type": "Organization", "name": e["host"]}, "isAccessibleForFree": True,
             "offers": {"@type": "Offer", "price": 0, "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": e["url"]},
-            "description": f"Free {e.get('format','event')} worth ~{e.get('cpe')} CPE for {', '.join(e.get('certs',[]))}."}
+            "description": event_description(e)}
 org = {"@type": "Organization", "@id": BASE + "/#org", "name": "CPE Radar", "url": BASE + "/", "logo": BASE + "/og.png"}
 site = {"@type": "WebSite", "@id": BASE + "/#website", "name": "CPE Radar", "alternateName": ["CPERadar", "cperadar.com"], "url": BASE + "/", "publisher": {"@id": BASE + "/#org"}}
 for f, (path, title, desc) in pages.items():
@@ -42,6 +61,10 @@ for f, (path, title, desc) in pages.items():
 <meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}/og.png">
 <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@graph": graph}).replace("</", "<\\/")}</script><!--/seo-->'''
     h = h.replace("<head>", "<head><meta charset=\"utf-8\">" + block, 1).replace(block + "<meta charset=\"utf-8\">", block, 1)
+    # Monday refresh rewrites heads and sitemap.xml. Keep the legal footer.
+    for marker in ("CPE Radar is independent and not affiliated", ">Privacy</a>", ">Terms</a>"):
+        if marker not in h:
+            raise SystemExit(f"seo.py would drop required footer text from {f}: {marker}")
     p.write_text(h)
 urls = "".join(f"<url><loc>{BASE}{v[0]}</loc><lastmod>{today}</lastmod><changefreq>{'weekly' if k=='index.html' else 'monthly'}</changefreq></url>\n" for k, v in pages.items())
 (ROOT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')

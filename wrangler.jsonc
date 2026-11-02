@@ -7,7 +7,10 @@
     "binding": "ASSETS"
   },
   // Runtime secret (do not put the token here): npx wrangler secret put GITHUB_TOKEN
-  // Fine-grained PAT, repo blacknet101/cpe-radar, Issues: Read and write.
+  // Fine-grained PAT needs Issues read/write on blacknet101/cpe-radar-inbox.
+  "vars": {
+    "GITHUB_REPO": "blacknet101/cpe-radar-inbox"
+  },
   "observability": {
     "enabled": true,
     "logs": { "enabled": true, "head_sampling_rate": 1 },
