@@ -38,7 +38,7 @@ for f, (path, title, desc) in pages.items():
 <meta property="og:title" content="{esc(title)}"><meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{BASE}{path}"><meta property="og:image" content="{BASE}/og.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@CPERadar"><meta name="twitter:creator" content="@CPERadar"><meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{BASE}/og.png">
 <script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@graph": graph}).replace("</", "<\\/")}</script><!--/seo-->'''
     h = h.replace("<head>", "<head><meta charset=\"utf-8\">" + block, 1).replace(block + "<meta charset=\"utf-8\">", block, 1)
