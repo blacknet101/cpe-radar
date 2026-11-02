@@ -17,7 +17,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/677957",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -37,7 +37,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -61,7 +61,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/676727",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -81,7 +81,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -105,7 +105,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/677227",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -125,7 +125,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -148,7 +148,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -172,7 +172,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/676728",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -193,7 +193,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/677918",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -213,7 +213,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -259,7 +259,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/677288",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -279,7 +279,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -303,7 +303,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/678028",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -323,7 +323,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -347,7 +347,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/677925",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -367,7 +367,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -390,7 +390,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -414,7 +414,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/677292",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -435,7 +435,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/676729",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -478,7 +478,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -524,7 +524,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -547,7 +547,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -570,7 +570,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -593,7 +593,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -616,7 +616,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -662,7 +662,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/678867",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -682,7 +682,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -706,7 +706,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/678513",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -726,7 +726,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -749,7 +749,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -773,7 +773,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/677950",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -794,7 +794,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/675260",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -837,7 +837,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -860,7 +860,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -906,7 +906,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -929,7 +929,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -952,7 +952,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -998,7 +998,7 @@
     "SSCP"
    ],
    "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "cpe_note": "ISC2 says it auto-credits members; check your ISC2 account.",
    "url": "https://www.brighttalk.com/webcast/288/677441",
    "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
@@ -1018,7 +1018,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1041,7 +1041,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1064,7 +1064,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1087,7 +1087,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1133,7 +1133,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1156,7 +1156,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1179,7 +1179,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1202,7 +1202,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1225,7 +1225,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1270,7 +1270,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1293,7 +1293,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1338,7 +1338,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1361,7 +1361,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1384,7 +1384,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
@@ -1407,7 +1407,7 @@
     "CISM",
     "Security+",
     "CySA+",
-    "CASP+"
+    "SecurityX"
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",

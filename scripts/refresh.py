@@ -16,7 +16,7 @@ def cpe_from(text):
     return (float(m.group(1)),True) if m else None
 def certs_for(host,text,stated):
     c=['CISSP','CCSP','SSCP'] if host=='ISC2' else ['CISSP','CISM','CISA','Security+','CySA+']
-    if host!='ISC2': c=['CISSP','CISM','Security+','CySA+','CASP+']
+    if host!='ISC2': c=['CISSP','CISM','Security+','CySA+','SecurityX']
     return c
 def brighttalk():
     ev=[]
@@ -37,7 +37,7 @@ def brighttalk():
             h=host or chtitle
             ev.append(dict(title=title,host=h,start=start.isoformat(),timezone='UTC',duration_min=mins,format='Webinar',
                 cpe=c[0] if c else round(max(mins,30)/60*2)/2,cpe_estimate=not c,
-                certs=certs_for(host,desc,c),auto_submit=(host=='ISC2'),cpe_note=('ISC2 auto-submits CPEs for members attending live/on-demand' if host=='ISC2' else 'Self-report; keep attendance certificate'),
+                certs=certs_for(host,desc,c),auto_submit=(host=='ISC2'),cpe_note=('ISC2 says it auto-credits members; check your ISC2 account.' if host=='ISC2' else 'Self-report; keep attendance certificate'),
                 url=link,source=f'BrightTALK channel {ch} RSS ({chtitle})',free=True))
     return ev
 def antisyphon():

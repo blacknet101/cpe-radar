@@ -8,6 +8,8 @@ Paste this block at the end of each new issue, after the Coming up section. Publ
 
 *CPE values marked est. are our estimates (≈1 per hour). Check with your certifying body. Know a free event? [Submit it](https://cperadar.com/submit.html).*
 
+*CPE Radar is independent and not affiliated with or endorsed by ISC2, CompTIA, ISACA, or any event host. CISSP, CISM, Security+ and other names are trademarks of their owners. CPE counts are estimates; verify with your certifying body.*
+
 *[Subscribe for weekly free CPEs](https://cpe-radar.beehiiv.com/subscribe)*
 
 Follow @CPERadar on X for daily picks: https://x.com/CPERadar

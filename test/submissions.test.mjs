@@ -38,7 +38,7 @@ function githubMock(handler) {
 }
 
 function created(number = 1) {
-  return { status: 201, body: { number, html_url: `https://github.com/blacknet101/cpe-radar/issues/${number}` } };
+  return { status: 201, body: { number, html_url: `https://github.com/blacknet101/cpe-radar-inbox/issues/${number}` } };
 }
 
 function post(data, { origin = "https://cperadar.com", ip = "203.0.113.10", accept = "application/json", type = "application/json" } = {}) {
@@ -96,7 +96,7 @@ test("event submission opens a labeled GitHub issue", async () => {
   assert.equal(json.ok, true);
   assert.match(json.message, /received it/);
   assert.equal(calls.length, 1);
-  assert.equal(calls[0].url, "https://api.github.com/repos/blacknet101/cpe-radar/issues");
+  assert.equal(calls[0].url, "https://api.github.com/repos/blacknet101/cpe-radar-inbox/issues");
   assert.equal(calls[0].headers.Authorization, `Bearer ${TOKEN}`);
   assert.equal(calls[0].init.redirect, "manual");
   assert.deepEqual(calls[0].body.labels, ["event-submission"]);
@@ -161,7 +161,7 @@ test("rate limit blocks the sixth submission from one address", async () => {
   assert.equal(other.response.status, 200);
 });
 
-test("missing token or bad repo does not call GitHub", async () => {
+test("missing token, a bad repo, or the public site repo does not call GitHub", async () => {
   const mock = githubMock(() => created());
   const missing = await route(post(event, { ip: "203.0.113.40" }), {}, { fetch: mock.fetchImpl, cache: memoryCache() });
   assert.equal(missing.status, 503);
@@ -170,6 +170,11 @@ test("missing token or bad repo does not call GitHub", async () => {
     cache: memoryCache(),
   });
   assert.equal(badRepo.status, 503);
+  const publicRepo = await route(post(event, { ip: "203.0.113.42" }), env({ GITHUB_REPO: "blacknet101/cpe-radar" }), {
+    fetch: mock.fetchImpl,
+    cache: memoryCache(),
+  });
+  assert.equal(publicRepo.status, 503);
   assert.equal(mock.calls.length, 0);
 });
 
@@ -212,6 +217,9 @@ test("a browser form post without JavaScript returns HTML", async () => {
   assert.match(response.headers.get("content-type"), /text\/html/);
   assert.match(text, /Thanks/);
   assert.match(text, /href="\/sponsor.html"/);
+  assert.match(text, /href="\/privacy.html"/);
+  assert.match(text, /href="\/terms.html"/);
+  assert.match(text, /not affiliated with or endorsed by ISC2/);
   assert.equal(calls[0].body.labels[0], "sponsor-inquiry");
 });
 

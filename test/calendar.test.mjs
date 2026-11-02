@@ -171,7 +171,7 @@ test("cards still render the start in the viewer's local zone", () => {
     });
     if (!html.includes("Oct 27")) process.exit(2);
     if (!html.includes("8:00 AM PDT")) process.exit(3);
-    if (!html.includes("auto-submit")) process.exit(4);
+    if (!html.includes("ISC2 says it auto-credits members; check your ISC2 account.")) process.exit(4);
     if (!html.includes(">Beyond Users and Workloads</a>")) process.exit(5);
   `;
   const result = spawnSync(process.execPath, ["--input-type=module", "-e", script], {
@@ -242,5 +242,26 @@ test("renderEvent is available to the page and boot does not run without a docum
   assert.match(html, /Next 7 days/);
   assert.match(html, /Next 30 days/);
   assert.match(html, /Next 90 days/);
-  assert.match(html, /Auto-submit only/);
+  assert.match(html, /ISC2 auto-credit only/);
+  assert.match(html, /check your ISC2 account/);
+});
+
+test("CASP+ displays as SecurityX and still matches that filter", () => {
+  const now = Date.parse("2026-10-19T12:00:00Z");
+  const events = [
+    ev({ title: "Legacy CASP session", certs: ["CASP+", "CISSP"], start: "2026-10-20T14:00:00Z" }),
+    ev({ title: "SecurityX session", certs: ["SecurityX", "CISM"], start: "2026-10-21T14:00:00Z" }),
+    ev({ title: "Other cert", certs: ["GIAC"], start: "2026-10-22T14:00:00Z" }),
+  ];
+  assert.deepEqual(
+    visibleEvents(events, { now, cert: "SecurityX" }).map((event) => event.title),
+    ["Legacy CASP session", "SecurityX session"],
+  );
+  assert.deepEqual(
+    visibleEvents(events, { now, cert: "CASP+" }).map((event) => event.title),
+    ["Legacy CASP session", "SecurityX session"],
+  );
+  const html = renderEvent(events[0]);
+  assert.match(html, />SecurityX</);
+  assert.doesNotMatch(html, /CASP\+/);
 });

@@ -379,8 +379,15 @@ async function sha256(value) {
   return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
 }
 
+// Form bodies include email addresses. Issues go to the private inbox only.
+// Never fall back to the public site repo (blacknet101/cpe-radar).
+const INBOX_REPO = "blacknet101/cpe-radar-inbox";
+const PUBLIC_SITE_REPO = "blacknet101/cpe-radar";
+
 function repoPath(env) {
-  const repo = (typeof env?.GITHUB_REPO === "string" && env.GITHUB_REPO.trim()) || "blacknet101/cpe-radar";
+  const configured = typeof env?.GITHUB_REPO === "string" ? env.GITHUB_REPO.trim() : "";
+  const repo = configured || INBOX_REPO;
+  if (repo.toLowerCase() === PUBLIC_SITE_REPO) return "";
   return /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repo) ? repo : "";
 }
 
@@ -483,7 +490,7 @@ function respond(request, status, payload, extraHeaders = {}) {
 }
 
 function renderPage({ title, heading, message, back, backLabel }) {
-  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>${escapeHtml(title)}</title><link rel="stylesheet" href="/style.css"></head><body><header><a class="logo" href="/index.html">◎ CPE Radar</a><nav><a href="/index.html">Calendar</a><a href="/submit.html">Submit an event</a><a href="/sponsor.html">Sponsor</a></nav></header><div class="page"><h1>${escapeHtml(heading)}</h1><p>${escapeHtml(message)}</p><p><a href="${escapeHtml(back)}">${escapeHtml(backLabel)}</a></p></div></body></html>`;
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>${escapeHtml(title)}</title><link rel="stylesheet" href="/style.css"></head><body><header><a class="logo" href="/index.html">◎ CPE Radar</a><nav><a href="/index.html">Calendar</a><a href="/submit.html">Submit an event</a><a href="/sponsor.html">Sponsor</a></nav></header><div class="page"><h1>${escapeHtml(heading)}</h1><p>${escapeHtml(message)}</p><p><a href="${escapeHtml(back)}">${escapeHtml(backLabel)}</a></p></div><footer><p class="disclaimer">CPE Radar is independent and not affiliated with or endorsed by ISC2, CompTIA, ISACA, or any event host. CISSP, CISM, Security+ and other names are trademarks of their owners. CPE counts are estimates; verify with your certifying body.</p><p class="legal"><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p></footer></body></html>`;
 }
 
 function escapeHtml(value) {
