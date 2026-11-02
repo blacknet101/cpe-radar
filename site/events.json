@@ -1,232 +1,7 @@
 {
- "generated": "2026-10-26T19:00:18.731364+00:00",
- "count": 67,
+ "generated": "2026-11-02T16:04:42.829543+00:00",
+ "count": 63,
  "events": [
-  {
-   "title": "Beyond Users and Workloads: The Agentic Shift in Cloud-Native Zero Trust",
-   "host": "ISC2",
-   "start": "2026-10-27T15:00:00+00:00",
-   "timezone": "UTC",
-   "duration_min": 60,
-   "format": "Webinar",
-   "cpe": 1.0,
-   "cpe_estimate": true,
-   "certs": [
-    "CISSP",
-    "CCSP",
-    "SSCP"
-   ],
-   "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
-   "url": "https://www.brighttalk.com/webcast/288/676467",
-   "source": "BrightTALK channel 288 RSS (Information Security)",
-   "free": true,
-   "url_ok": true
-  },
-  {
-   "title": "Behind the Tabletop: What a Hospital Ransomware Exercise Can Teach Us About SOC Readiness",
-   "host": "WiCyS - Women in CyberSecurity",
-   "start": "2026-10-27T18:00:00+00:00",
-   "timezone": "UTC",
-   "duration_min": 60,
-   "format": "Webinar",
-   "cpe": 1.0,
-   "cpe_estimate": true,
-   "certs": [
-    "CISSP",
-    "CISM",
-    "Security+",
-    "CySA+",
-    "CASP+"
-   ],
-   "auto_submit": false,
-   "cpe_note": "Self-report; keep attendance certificate",
-   "url": "https://www.brighttalk.com/webcast/17216/676643",
-   "source": "BrightTALK channel 17216 RSS (WiCyS - Women in CyberSecurity)",
-   "free": true,
-   "url_ok": true
-  },
-  {
-   "title": "Securing MCP Servers from Agentic AI Attacks",
-   "host": "ISC2",
-   "start": "2026-10-28T08:00:00+00:00",
-   "timezone": "UTC",
-   "duration_min": 60,
-   "format": "Webinar",
-   "cpe": 1.0,
-   "cpe_estimate": true,
-   "certs": [
-    "CISSP",
-    "CCSP",
-    "SSCP"
-   ],
-   "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
-   "url": "https://www.brighttalk.com/webcast/288/676478",
-   "source": "BrightTALK channel 288 RSS (Information Security)",
-   "free": true,
-   "url_ok": true
-  },
-  {
-   "title": "Fewer Tickets, Faster Fixes: Maximizing ROI on TruRisk Eliminate",
-   "host": "Qualys",
-   "start": "2026-10-28T16:00:00+00:00",
-   "timezone": "UTC",
-   "duration_min": 60,
-   "format": "Webinar",
-   "cpe": 1.0,
-   "cpe_estimate": true,
-   "certs": [
-    "CISSP",
-    "CISM",
-    "Security+",
-    "CySA+",
-    "CASP+"
-   ],
-   "auto_submit": false,
-   "cpe_note": "Self-report; keep attendance certificate",
-   "url": "https://www.brighttalk.com/webcast/11673/674417",
-   "source": "BrightTALK channel 11673 RSS (Qualys)",
-   "free": true,
-   "url_ok": true
-  },
-  {
-   "title": "Preparing for the November 24, 2026 Scoring Recalibration: An Open Forum",
-   "host": "SecurityScorecard",
-   "start": "2026-10-28T16:00:00+00:00",
-   "timezone": "UTC",
-   "duration_min": 45,
-   "format": "Webinar",
-   "cpe": 1.0,
-   "cpe_estimate": true,
-   "certs": [
-    "CISSP",
-    "CISM",
-    "Security+",
-    "CySA+",
-    "CASP+"
-   ],
-   "auto_submit": false,
-   "cpe_note": "Self-report; keep attendance certificate",
-   "url": "https://www.brighttalk.com/webcast/19566/676492",
-   "source": "BrightTALK channel 19566 RSS (SecurityScorecard)",
-   "free": true,
-   "url_ok": true
-  },
-  {
-   "title": "Anti-Cast: Using AI as Your Personal Research Assistant with Ashley Knowles",
-   "host": "Antisyphon Training / Black Hills InfoSec",
-   "start": "2026-10-28T16:00:00+00:00",
-   "timezone": "America/New_York",
-   "duration_min": 60,
-   "format": "Webinar",
-   "cpe": 1.0,
-   "cpe_estimate": true,
-   "certs": [
-    "CISSP",
-    "CISM",
-    "Security+",
-    "CySA+",
-    "GIAC"
-   ],
-   "auto_submit": false,
-   "url": "https://www.antisyphontraining.com/event/anti-cast-using-ai-as-your-personal-research-assistant-with-ashley-knowles/",
-   "source": "antisyphontraining.com Events API",
-   "free": true,
-   "url_ok": true
-  },
-  {
-   "title": "OpenText and SoftChoice Present: The Nightmare Before Recovery, When Ransomware Comes for You",
-   "host": "OpenText - Cybersecurity",
-   "start": "2026-10-28T17:00:00+00:00",
-   "timezone": "UTC",
-   "duration_min": 60,
-   "format": "Webinar",
-   "cpe": 1.0,
-   "cpe_estimate": true,
-   "certs": [
-    "CISSP",
-    "CISM",
-    "Security+",
-    "CySA+",
-    "CASP+"
-   ],
-   "auto_submit": false,
-   "cpe_note": "Self-report; keep attendance certificate",
-   "url": "https://www.webroot.com/us/en/business/resources/webinars?commid=676568",
-   "source": "BrightTALK channel 8241 RSS (OpenText - Cybersecurity)",
-   "free": true,
-   "url_ok": true
-  },
-  {
-   "title": "Breaking the Glass Firewall: The Unwritten Lessons of Becoming a CISO",
-   "host": "WiCyS - Women in CyberSecurity",
-   "start": "2026-10-28T18:30:00+00:00",
-   "timezone": "UTC",
-   "duration_min": 60,
-   "format": "Webinar",
-   "cpe": 1.0,
-   "cpe_estimate": true,
-   "certs": [
-    "CISSP",
-    "CISM",
-    "Security+",
-    "CySA+",
-    "CASP+"
-   ],
-   "auto_submit": false,
-   "cpe_note": "Self-report; keep attendance certificate",
-   "url": "https://www.brighttalk.com/webcast/17216/676645",
-   "source": "BrightTALK channel 17216 RSS (WiCyS - Women in CyberSecurity)",
-   "free": true,
-   "url_ok": true
-  },
-  {
-   "title": "From Blind Spots to Full Visibility: Streamlining Protection with NDR",
-   "host": "Kaspersky webinars",
-   "start": "2026-10-29T14:00:00+00:00",
-   "timezone": "UTC",
-   "duration_min": 60,
-   "format": "Webinar",
-   "cpe": 1.0,
-   "cpe_estimate": true,
-   "certs": [
-    "CISSP",
-    "CISM",
-    "Security+",
-    "CySA+",
-    "CASP+"
-   ],
-   "auto_submit": false,
-   "cpe_note": "Self-report; keep attendance certificate",
-   "url": "https://www.brighttalk.com/webcast/15591/676506",
-   "source": "BrightTALK channel 15591 RSS (Kaspersky webinars)",
-   "free": true,
-   "url_ok": true
-  },
-  {
-   "title": "Migration Nightmares & Disaster Recovery Horrors: Scary Stories from the Data Protection Crypt",
-   "host": "OpenText - Cybersecurity",
-   "start": "2026-10-29T16:00:00+00:00",
-   "timezone": "UTC",
-   "duration_min": 60,
-   "format": "Webinar",
-   "cpe": 1.0,
-   "cpe_estimate": true,
-   "certs": [
-    "CISSP",
-    "CISM",
-    "Security+",
-    "CySA+",
-    "CASP+"
-   ],
-   "auto_submit": false,
-   "cpe_note": "Self-report; keep attendance certificate",
-   "url": "https://www.webroot.com/us/en/business/resources/webinars?commid=676567",
-   "source": "BrightTALK channel 8241 RSS (OpenText - Cybersecurity)",
-   "free": true,
-   "url_ok": true
-  },
   {
    "title": "Beyond the CPU: Exposing AI Attacks in the GPU Stack",
    "host": "ISC2",
@@ -531,6 +306,29 @@
    "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
    "url": "https://www.brighttalk.com/webcast/288/678028",
    "source": "BrightTALK channel 288 RSS (Information Security)",
+   "free": true,
+   "url_ok": true
+  },
+  {
+   "title": "Defending Against PHP2Shell: Imperva Mitigation in Action",
+   "host": "Thales - Cybersecurity Solutions",
+   "start": "2026-11-05T05:00:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 60,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CISM",
+    "Security+",
+    "CySA+",
+    "CASP+"
+   ],
+   "auto_submit": false,
+   "cpe_note": "Self-report; keep attendance certificate",
+   "url": "https://cpl.thalesgroup.com/resources/webinars?commid=678653",
+   "source": "BrightTALK channel 2037 RSS (Thales - Cybersecurity Solutions)",
    "free": true,
    "url_ok": true
   },
@@ -850,6 +648,27 @@
    "url_ok": true
   },
   {
+   "title": "From Alert Storm to Boardroom: Decision-Ready Incident Intelligence",
+   "host": "ISC2",
+   "start": "2026-11-12T13:00:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 60,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CCSP",
+    "SSCP"
+   ],
+   "auto_submit": true,
+   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "url": "https://www.brighttalk.com/webcast/288/678867",
+   "source": "BrightTALK channel 288 RSS (Information Security)",
+   "free": true,
+   "url_ok": true
+  },
+  {
    "title": "Bridging the Payment Security Skills Gap",
    "host": "Thales - Cybersecurity Solutions",
    "start": "2026-11-12T15:00:00+00:00",
@@ -869,6 +688,27 @@
    "cpe_note": "Self-report; keep attendance certificate",
    "url": "https://cpl.thalesgroup.com/resources/webinars?commid=670219",
    "source": "BrightTALK channel 2037 RSS (Thales - Cybersecurity Solutions)",
+   "free": true,
+   "url_ok": true
+  },
+  {
+   "title": "Your AI Incident Responder Joined the Attack: Automation as Vulnerability",
+   "host": "ISC2",
+   "start": "2026-11-12T18:00:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 60,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CCSP",
+    "SSCP"
+   ],
+   "auto_submit": true,
+   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
+   "url": "https://www.brighttalk.com/webcast/288/678513",
+   "source": "BrightTALK channel 288 RSS (Information Security)",
    "free": true,
    "url_ok": true
   },
@@ -1053,9 +893,9 @@
    "url_ok": true
   },
   {
-   "title": "Blocking Isn't Enough: Collaborative Defense for IT Leaders",
-   "host": "ISC2",
-   "start": "2026-11-18T16:00:00+00:00",
+   "title": "Navigating the Frontier AI Era: Blueprint for Autonomous Code-to-Cloud Defense",
+   "host": "Qualys",
+   "start": "2026-11-18T17:00:00+00:00",
    "timezone": "UTC",
    "duration_min": 60,
    "format": "Webinar",
@@ -1063,13 +903,15 @@
    "cpe_estimate": true,
    "certs": [
     "CISSP",
-    "CCSP",
-    "SSCP"
+    "CISM",
+    "Security+",
+    "CySA+",
+    "CASP+"
    ],
-   "auto_submit": true,
-   "cpe_note": "ISC2 auto-submits CPEs for members attending live/on-demand",
-   "url": "https://www.brighttalk.com/webcast/288/677236",
-   "source": "BrightTALK channel 288 RSS (Information Security)",
+   "auto_submit": false,
+   "cpe_note": "Self-report; keep attendance certificate",
+   "url": "https://www.brighttalk.com/webcast/11673/678217",
+   "source": "BrightTALK channel 11673 RSS (Qualys)",
    "free": true,
    "url_ok": true
   },
@@ -1120,6 +962,28 @@
    "url_ok": true
   },
   {
+   "title": "Anti-Cast: Baselines Behaving Badly with Zane Gittins",
+   "host": "Antisyphon Training / Black Hills InfoSec",
+   "start": "2026-11-18T17:00:00+00:00",
+   "timezone": "America/New_York",
+   "duration_min": 60,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CISM",
+    "Security+",
+    "CySA+",
+    "GIAC"
+   ],
+   "auto_submit": false,
+   "url": "https://www.antisyphontraining.com/event/baselines-behaving-badly-with-zane-gittins/",
+   "source": "antisyphontraining.com Events API",
+   "free": true,
+   "url_ok": true
+  },
+  {
    "title": "Identity Before Intelligence: Securing Hybrid and AI-Enabled Networks",
    "host": "ISC2",
    "start": "2026-11-18T18:00:00+00:00",
@@ -1141,13 +1005,13 @@
    "url_ok": true
   },
   {
-   "title": "Dry run - Beyond Visibility \u2013 Why AI Is Exposing Risks Traditional Security Can't See",
-   "host": "Thales - Cybersecurity Solutions",
-   "start": "2026-11-19T06:00:00+00:00",
+   "title": "Empowered by Certifications: A Career Panel",
+   "host": "WiCyS - Women in CyberSecurity",
+   "start": "2026-11-18T20:00:00+00:00",
    "timezone": "UTC",
-   "duration_min": 30,
+   "duration_min": 60,
    "format": "Webinar",
-   "cpe": 0.5,
+   "cpe": 1.0,
    "cpe_estimate": true,
    "certs": [
     "CISSP",
@@ -1158,8 +1022,8 @@
    ],
    "auto_submit": false,
    "cpe_note": "Self-report; keep attendance certificate",
-   "url": "https://cpl.thalesgroup.com/resources/webinars?commid=678361",
-   "source": "BrightTALK channel 2037 RSS (Thales - Cybersecurity Solutions)",
+   "url": "https://www.brighttalk.com/webcast/17216/678498",
+   "source": "BrightTALK channel 17216 RSS (WiCyS - Women in CyberSecurity)",
    "free": true,
    "url_ok": true
   },
@@ -1344,6 +1208,51 @@
    "cpe_note": "Self-report; keep attendance certificate",
    "url": "https://www.webroot.com/us/en/business/resources/webinars?commid=673466",
    "source": "BrightTALK channel 8241 RSS (OpenText - Cybersecurity)",
+   "free": true,
+   "url_ok": true
+  },
+  {
+   "title": "From Raw Data to AI Value: Protecting Sensitive Data in Snowflake Cortex AI with Thales",
+   "host": "Thales - Cybersecurity Solutions",
+   "start": "2026-12-02T16:00:00+00:00",
+   "timezone": "UTC",
+   "duration_min": 60,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CISM",
+    "Security+",
+    "CySA+",
+    "CASP+"
+   ],
+   "auto_submit": false,
+   "cpe_note": "Self-report; keep attendance certificate",
+   "url": "https://cpl.thalesgroup.com/resources/webinars?commid=675200",
+   "source": "BrightTALK channel 2037 RSS (Thales - Cybersecurity Solutions)",
+   "free": true,
+   "url_ok": true
+  },
+  {
+   "title": "Anti-Cast: CMMC Level 1: Show Me the Evidence with Rae McElroy",
+   "host": "Antisyphon Training / Black Hills InfoSec",
+   "start": "2026-12-02T17:00:00+00:00",
+   "timezone": "America/New_York",
+   "duration_min": 60,
+   "format": "Webinar",
+   "cpe": 1.0,
+   "cpe_estimate": true,
+   "certs": [
+    "CISSP",
+    "CISM",
+    "Security+",
+    "CySA+",
+    "GIAC"
+   ],
+   "auto_submit": false,
+   "url": "https://www.antisyphontraining.com/event/anti-cast-cmmc-level-1-show-me-the-evidence-with-rae-mcelroy/",
+   "source": "antisyphontraining.com Events API",
    "free": true,
    "url_ok": true
   },
